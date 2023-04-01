@@ -1,0 +1,12 @@
+name: HelloWorld
+version: '${project.version}'
+main: me.maikeru.hello_world.HelloWorld
+api-version: 1.19
+commands:
+  hello:
+    description: Command says hello to you!
+    usage: /hello
+    permission: helloWorld.hello
+  pm:
+    description: Standard pm command, can message console
+    permission: helloWorld.pm
