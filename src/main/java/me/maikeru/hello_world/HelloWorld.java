@@ -8,7 +8,7 @@ public final class HelloWorld extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        Bukkit.getLogger().info("Hello world!");
+        // Redundant Bukkit.getLogger().info("Hello world!");
         this.getCommand("hello").setExecutor(new CommandHelloHandler());
         this.getCommand("pm").setExecutor(new CommandPM());
     }
@@ -16,8 +16,12 @@ public final class HelloWorld extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        Bukkit.getLogger().info("Goodbye world!");
 
+    }
+
+    public void disablePlugin() {
+        // Should this happen, it means something went really wrong
+        Bukkit.getServer().getPluginManager().disablePlugin(this);
     }
     
 
