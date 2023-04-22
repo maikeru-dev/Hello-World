@@ -45,11 +45,4 @@
 /libraries/io/netty/netty-transport-udt/4.1.87.Final/netty-transport-udt-4.1.87.Final.jar
 /libraries/io/papermc/paper/paper-api/1.19.4-R0.1-SNAPSHOT/paper-api-1.19.4-R0.1-SNAPSHOT.jar
 /libraries/io/papermc/paper/paper-mojangapi/1.19.4-R0.1-SNAPSHOT/paper-mojangapi-1.19.4-R0.1-SNAPSHOT.jar
-/target/classes/me/maikeru/hello_world/CommandHelloHandler.class
-/target/classes/me/maikeru/hello_world/CommandPM.class
-/target/classes/me/maikeru/hello_world/HelloWorld.class
-/target/classes/plugin.yml
-/target/maven-archiver/pom.properties
-/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
-/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
-/target/Hello_World-1.0-SNAPSHOT.jar
+/target/
