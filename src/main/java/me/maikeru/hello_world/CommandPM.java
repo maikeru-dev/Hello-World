@@ -48,15 +48,14 @@ public class CommandPM implements CommandExecutor {
             HelloWorld.updateReplyMap(sender.getUniqueId(), receiver.getUniqueId());
             return true;
         }
-        catch(MissingNameException | MissingMsgException e) {commandSender.sendMessage(e.getMessage());}
-        catch(InvalidPlayerNameException e) {commandSender.sendMessage(e.getMessage());}
+        catch(CustomException e) {commandSender.sendMessage(e.getMessage());}
         catch(Exception e) {Bukkit.getLogger().log(Level.SEVERE, "Error! Could not finish PM command: " + e.getMessage());}
         return false;
 
 
     }
     public String validateCommandContent(String[] args)
-            throws MissingMsgException, MissingNameException, InvalidPlayerNameException {
+            throws CustomException {
 
         if (args.length == 0) throw new MissingNameException();
         if (args.length == 1) throw new MissingMsgException();
@@ -69,17 +68,17 @@ public class CommandPM implements CommandExecutor {
         return compiledString.toString();
 
     }
-    private class MissingNameException extends Exception {
+    private class MissingNameException extends CustomException {
         public MissingNameException() {
             super(ChatColor.RED + "Who are you sending your message to? Usage: /pm (name) (message...)");
         }
     }
-    private class MissingMsgException extends Exception {
+    private class MissingMsgException extends CustomException {
         public MissingMsgException() {
             super(ChatColor.RED + "What is your message? Usage: /pm (name) (message...)");
         }
     }
-    private class InvalidPlayerNameException extends Exception {
+    private class InvalidPlayerNameException extends CustomException {
         public InvalidPlayerNameException() {
             super(ChatColor.RED + "That player isn't online right now, check your spelling? Usage: /pm (name) (message...)");
         }

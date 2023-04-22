@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff38011f-89e9-4b75-9e7a-f42fae3184bf" name="Changes" comment="Fixing .gitignore file">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandCreative.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandKillText.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandSpawnText.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CustomException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/flatFileAccessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Hello World.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Hello World.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandPM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandPM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandReply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandReply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/HelloWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
