@@ -8,5 +8,20 @@ commands:
     usage: /hello
     permission: helloWorld.hello
   pm:
-    description: Standard pm command, can message console
+    description: Standard pm command, cannot message console
     permission: helloWorld.pm
+  reply:
+    description: Replies to the last user that message that messaged the executor
+    permission:  helloWorld.reply
+  spawntext:
+    description: Spawns an invisible armor stand with a name
+    permission: helloWorld.spawntext
+  killtext:
+    description: Kills the invisible armor stand with a name
+    permission: helloWorld.killtext
+  creative:
+    description: Switches the executor's user data to a temporary empty file and sets their gamemode to creative.
+    permission: helloWorld.creative
+  survival:
+    description: Switches the executor's user data back to a backup data file and sets their gamemode.
+    permission: helloWorld.survival

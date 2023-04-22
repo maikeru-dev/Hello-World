@@ -1,7 +1,6 @@
 package me.maikeru.hello_world;
 
 import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.ComponentLike;
 import net.kyori.adventure.text.TextComponent;
 import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.Bukkit;
@@ -45,15 +44,14 @@ public class CommandPM implements CommandExecutor {
 
             receiver.sendMessage(msg);
             sender.sendMessage(msg);
+
+            HelloWorld.updateReplyMap(sender.getUniqueId(), receiver.getUniqueId());
             return true;
         }
-        catch(MissingNameException e) {commandSender.sendMessage(e.getMessage());}
-        catch(MissingMsgException e) {commandSender.sendMessage(e.getMessage());}
+        catch(MissingNameException | MissingMsgException e) {commandSender.sendMessage(e.getMessage());}
         catch(InvalidPlayerNameException e) {commandSender.sendMessage(e.getMessage());}
         catch(Exception e) {Bukkit.getLogger().log(Level.SEVERE, "Error! Could not finish PM command: " + e.getMessage());}
-        finally {
-            return false;
-        }
+        return false;
 
 
     }
@@ -71,32 +69,22 @@ public class CommandPM implements CommandExecutor {
         return compiledString.toString();
 
     }
-}
-
-
-
-class NonTargetException extends Exception {
-    // This exception should activate whenever the commandSender or receiver
-    // an unintended type. i.e., non-player;
-    public NonTargetException() {
-        super(ChatColor.RED + "Target is non-player. ??");
+    private class MissingNameException extends Exception {
+        public MissingNameException() {
+            super(ChatColor.RED + "Who are you sending your message to? Usage: /pm (name) (message...)");
+        }
     }
-}
-class MissingNameException extends Exception {
-    public MissingNameException() {
-        super(ChatColor.RED + "Who are you sending your message to? Usage: /pm (name) (message...)");
+    private class MissingMsgException extends Exception {
+        public MissingMsgException() {
+            super(ChatColor.RED + "What is your message? Usage: /pm (name) (message...)");
+        }
     }
+    private class InvalidPlayerNameException extends Exception {
+        public InvalidPlayerNameException() {
+            super(ChatColor.RED + "That player isn't online right now, check your spelling? Usage: /pm (name) (message...)");
+        }
 
-}
-class MissingMsgException extends Exception {
-    public MissingMsgException() {
-        super(ChatColor.RED + "What is your message? Usage: /pm (name) (message...)");
-    }
-}
-class InvalidPlayerNameException extends Exception {
-
-    public InvalidPlayerNameException() {
-        super(ChatColor.RED + "That player isn't online right now, check your spelling? Usage: /pm (name) (message...)");
     }
 
 }
+

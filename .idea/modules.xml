@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Hello World.iml" filepath="$PROJECT_DIR$/.idea/Hello World.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Minecraft Server/Minecraft Server.iml" filepath="$PROJECT_DIR$/../../Minecraft Server/Minecraft Server.iml" />
     </modules>
   </component>
 </project>

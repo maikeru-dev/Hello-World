@@ -4,10 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff38011f-89e9-4b75-9e7a-f42fae3184bf" name="Changes" comment="Appending Configuration files + actual source code &#10;Source code contains hello world and pm commands">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="ff38011f-89e9-4b75-9e7a-f42fae3184bf" name="Changes" comment="Fixing .gitignore file">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandCreative.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandKillText.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandSpawnText.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CustomException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/flatFileAccessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Hello World.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Hello World.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandPM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandPM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandReply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandReply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/HelloWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +37,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RESET_MODE" value="HARD" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -35,6 +49,16 @@
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadAnnotationsAutomatically" value="true" />
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2NnipygtXfYedmzvDj6AzQQSTai" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -44,14 +68,27 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mecha/OneDrive - University of Strathclyde/Projects/minecraft dev/Hello World&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mecha/OneDrive - University of Strathclyde/Projects/Minecraft Server/world/playerdata&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mecha\OneDrive - University of Strathclyde\Projects\Minecraft Server\world\playerdata" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mecha\OneDrive - University of Strathclyde\Projects\Minecraft Server\plugins\Hello_World" />
+      <recent name="C:\Users\mecha\OneDrive - University of Strathclyde\Projects\Minecraft Server\world\playerdata\backup\backup2" />
+      <recent name="C:\Users\mecha\OneDrive - University of Strathclyde\Projects\Minecraft Server\world\playerdata" />
+    </key>
+  </component>
   <component name="RunManager" selected="JAR Application.Start Server+Install ">
     <configuration name="Reload MC server" type="JarApplication">
       <option name="JAR_PATH" value="$PROJECT_DIR$/../../Minecraft Server/paper.jar" />
@@ -125,7 +162,35 @@
       <option name="project" value="LOCAL" />
       <updated>1680386059131</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="PM command is finished, using &quot;Adventure&quot;'s Component system for sending messages to clients!">
+      <created>1680398281921</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680398281921</updated>
+    </task>
+    <task id="LOCAL-00004" summary="PM command is finished, using &quot;Adventure&quot;'s Component system for sending messages to clients!">
+      <created>1680398296790</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680398296790</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fixing .gitignore file">
+      <created>1680398487825</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680398487825</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Improved readability on PM command &#10;Adding Reply command&#10;Added pluginDisable method to main">
+      <created>1680981199092</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680981199092</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,6 +224,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Appending Configuration files" />
     <MESSAGE value="Appending Configuration files + actual source code &#10;Source code contains hello world and pm commands" />
-    <option name="LAST_COMMIT_MESSAGE" value="Appending Configuration files + actual source code &#10;Source code contains hello world and pm commands" />
+    <MESSAGE value="PM command is finished, using &quot;Adventure&quot;'s Component system for sending messages to clients!" />
+    <MESSAGE value="Fixing .gitignore file" />
+    <MESSAGE value="Improved readability on PM command &#10;Adding Reply command&#10;Added pluginDisable method to main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved readability on PM command &#10;Adding Reply command&#10;Added pluginDisable method to main" />
   </component>
 </project>
