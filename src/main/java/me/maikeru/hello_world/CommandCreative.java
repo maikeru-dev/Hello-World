@@ -11,33 +11,30 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.CopyOption;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.TimeUnit;
+import java.nio.file.*;
 
 public class CommandCreative implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
         if (!(commandSender instanceof Player)) return false;
         Player player = (Player) commandSender;
-        String absPath = Bukkit.getPluginsFolder().getAbsolutePath().toString() + "/../world/playerdata/" + player.getUniqueId().toString();
+        String absPath = Bukkit.getPluginsFolder().getAbsolutePath() + "/../world/playerdata/" + player.getUniqueId();
         File fromFile = new File(absPath + ".dat");
         File toFile = new File(absPath + ".BACKUPdat");
 
-        boolean backupAction = fromFile.renameTo(toFile);
-
-        if (!backupAction) {
+        if (Files.exists(toFile.toPath())) {
             commandSender.sendMessage(ChatColor.RED + "You can't have more than one backup file!");
             return false;
-        }else {
-            // Your code here executes after 5 seconds!
-            CompletableFuture.delayedExecutor(5, TimeUnit.SECONDS).execute(player::loadData);
-            player.setGameMode(GameMode.CREATIVE);
         }
 
+        try {
+            Files.move(fromFile.toPath(), toFile.toPath(), StandardCopyOption.ATOMIC_MOVE);
+            player.loadData();
+            player.setGameMode(GameMode.CREATIVE);
+        } catch (IOException e) {
+            Bukkit.getLogger().severe(e.getMessage());
+            return false;
+        }
 
 
         return true;

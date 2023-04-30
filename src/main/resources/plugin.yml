@@ -10,9 +10,11 @@ commands:
   pm:
     description: Standard pm command, cannot message console
     permission: helloWorld.pm
+    default: true
   reply:
     description: Replies to the last user that message that messaged the executor
     permission:  helloWorld.reply
+    default: true
   spawntext:
     description: Spawns an invisible armor stand with a name
     permission: helloWorld.spawntext
@@ -25,3 +27,7 @@ commands:
   survival:
     description: Switches the executor's user data back to a backup data file and sets their gamemode.
     permission: helloWorld.survival
+  voteskip:
+    description: Allows players to vote to skip the night as long as half are sleeping!
+    permission: helloWorld.voteskip
+    default: true

@@ -25,7 +25,7 @@ public class CommandKillText implements CommandExecutor {
         try {
             flatFileAccessor accessor = new flatFileAccessor();
             if (args.length < 1) throw new invalidArgsException();
-
+            
             UUID armorStandUUID = accessor.getValue(args[0]);
             ArmorStand armorStand = (ArmorStand) Bukkit.getEntity(armorStandUUID);
             armorStand.setHealth(0);

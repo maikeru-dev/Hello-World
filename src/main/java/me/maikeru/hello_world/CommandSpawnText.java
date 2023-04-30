@@ -3,20 +3,16 @@ package me.maikeru.hello_world;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
 import net.kyori.adventure.text.format.TextColor;
-import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-import org.w3c.dom.Text;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.UUID;
+
+
 
 // Get JSON file responsible for holding { UUID : given_name }
 // Create armor stand
@@ -39,16 +35,19 @@ public class CommandSpawnText implements CommandExecutor {
 
         ArmorStand armorStand = player.getWorld().spawn(player.getLocation(), ArmorStand.class);
         try {
+            flatFileAccessor accessor = new flatFileAccessor();
+
             if (args.length < 1) throw new invalidArgsException();
+            if (accessor.getValue(args[0]) != null) throw new invalidNameException();
 
             armorStand.setGravity(false);
             armorStand.setCustomNameVisible(true);
             armorStand.setCollidable(false);
             armorStand.customName(standName);
-            armorStand.setInvisible(true);
+            armorStand.setInvisible(false);
             armorStand.setInvulnerable(true);
 
-            flatFileAccessor accessor = new flatFileAccessor();
+
 
             accessor.appendEntry(player.getUniqueId(), args[0], armorStand.getUniqueId());
         } catch (IOException e) {
@@ -73,6 +72,11 @@ public class CommandSpawnText implements CommandExecutor {
     private class invalidArgsException extends CustomException {
         public invalidArgsException() {
             super("You must enter a name and a message! Check your arguments!");
+        }
+    }
+    private class invalidNameException extends CustomException {
+        public invalidNameException() {
+            super("You cannot enter tag_name for a hologram that exists already!");
         }
     }
     private String compileMsg(String[] args, int beginningIndex) {

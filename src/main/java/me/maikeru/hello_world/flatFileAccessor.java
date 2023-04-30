@@ -53,7 +53,7 @@ public class flatFileAccessor {
             }
 
             scanner.close();
-            if (found == false) throw new invalidNameException();
+            if (!found) return null;
 
             return UUID.fromString(line[2]);
 
