@@ -38,7 +38,7 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <outputFile>C:\Users\mecha\OneDrive - University of Strathclyde\Projects\Minecraft Server\plugins\Hello_World.jar</outputFile>
+              <outputFile>C:\Users\mecha\Desktop\Dev\Minecraft Server\plugins\Hello_World.jar</outputFile>
               <createDependencyReducedPom>false</createDependencyReducedPom>
             </configuration>
           </execution>

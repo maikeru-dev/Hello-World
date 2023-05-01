@@ -32,13 +32,11 @@ public class CommandVoteSkip implements CommandExecutor {
             if (votesCount == onlinePlayersCount){
                 p.getWorld().setTime(1000);
             }else {
-
                 TextComponent text = Component.text()
                         .content( votesCount + "/" + onlinePlayersCount + " have voted to skip the night! " + (onlinePlayersCount-votesCount) + " more are required to vote!")
                         .color(TextColor.color(190, 190, 190))
                         .build();
                 p.sendMessage(text);
-
             }
 
 

@@ -29,7 +29,6 @@ public class ListenerSleep implements Listener {
             }
         }
     }
-
     @EventHandler
     public void PlayerBedLeaveEvent(PlayerBedLeaveEvent e) {
         if (HelloWorld.getCurrentPlayerSleepingCount() != 0) { // getting daytime is too slow
@@ -43,7 +42,6 @@ public class ListenerSleep implements Listener {
             }
         }
     }
-
     @EventHandler
     public void TimeSkipEvent(TimeSkipEvent e) {
         HelloWorld.resetCurrentPlayerSleepingCount();
@@ -51,12 +49,11 @@ public class ListenerSleep implements Listener {
         if (e.getWorld().getGameRuleValue(GameRule.DO_DAYLIGHT_CYCLE)) {
             TextComponent text = Component.text()
                     .content("It's daytime! Yay :)")
-                    .color(TextColor.color(	144, 238, 144))
+                    .color(TextColor.color(144, 238, 144))
                     .build();
             Bukkit.broadcast(text);
         }
     }
-
     @EventHandler
     public void PlayerQuitEvent(PlayerQuitEvent e) {
         HelloWorld.VoteSystem.removeVote(e.getPlayer().getUniqueId());

@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff38011f-89e9-4b75-9e7a-f42fae3184bf" name="Changes" comment="Added a voteskip command + sleep listener !&#10;Started on a SetDisplayName command!">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandSetDisplayName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandVoteSkip.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/ListenerSleep.java" afterDir="false" />
+    <list default="true" id="ff38011f-89e9-4b75-9e7a-f42fae3184bf" name="Changes" comment="Added a voteskip command + sleep listener !&#10;Started on a SetDisplayName command!&#10;Removed unused imports :)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/ListenerJoin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandCreative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandCreative.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandKillText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandKillText.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandSpawnText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandSpawnText.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CustomException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CustomException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandPM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandPM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandSetDisplayName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandSetDisplayName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandVoteSkip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandVoteSkip.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/HelloWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/flatFileAccessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/flatFileAccessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/ListenerSleep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/ListenerSleep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +67,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mecha/OneDrive - University of Strathclyde/Projects/minecraft dev/Hello World fork/Hello-World&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mecha/Desktop/Dev/Minecraft Server&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -96,10 +94,10 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Server+Install " type="JarApplication">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/../../Minecraft Server/paper.jar" />
+      <option name="JAR_PATH" value="$USER_HOME$/Desktop/Dev/Minecraft Server/paper.jar" />
       <option name="VM_PARAMETERS" value="-Xmx4096M -Xms4096M" />
       <option name="PROGRAM_PARAMETERS" value="nogui" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\mecha\OneDrive - University of Strathclyde\Projects\Minecraft Server\" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\mecha\Desktop\Dev\Minecraft Server\" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="RunConfigurationTask" enabled="true" run_configuration_name="Hello_World package" run_configuration_type="MavenRunConfiguration" />
@@ -194,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682197252441</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added a voteskip command + sleep listener !&#10;Started on a SetDisplayName command!&#10;Removed unused imports :)">
+      <created>1682817268787</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682817268787</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,6 +238,7 @@
     <MESSAGE value="Improved readability on PM command &#10;Adding Reply command&#10;Added pluginDisable method to main" />
     <MESSAGE value="Updating the code to use ChatColor instead of TextColor because it is simpler and more concise.&#10;Also changed the Exceptions in PM to use CustomException to simplify catch statement." />
     <MESSAGE value="Added a voteskip command + sleep listener !&#10;Started on a SetDisplayName command!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a voteskip command + sleep listener !&#10;Started on a SetDisplayName command!" />
+    <MESSAGE value="Added a voteskip command + sleep listener !&#10;Started on a SetDisplayName command!&#10;Removed unused imports :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a voteskip command + sleep listener !&#10;Started on a SetDisplayName command!&#10;Removed unused imports :)" />
   </component>
 </project>

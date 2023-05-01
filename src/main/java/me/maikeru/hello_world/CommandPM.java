@@ -63,7 +63,7 @@ public class CommandPM implements CommandExecutor {
 
         StringBuilder compiledString = new StringBuilder();
         for (int i = 1; i < args.length; i++) {
-            compiledString.append(" " + args[i]);
+            compiledString.append(" ").append(args[i]);
         }
         return compiledString.toString();
 

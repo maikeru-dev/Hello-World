@@ -1,6 +1,7 @@
 name: HelloWorld
 version: '${project.version}'
 main: me.maikeru.hello_world.HelloWorld
+default-permission: op
 api-version: 1.19
 commands:
   hello:
@@ -10,11 +11,9 @@ commands:
   pm:
     description: Standard pm command, cannot message console
     permission: helloWorld.pm
-    default: true
   reply:
     description: Replies to the last user that message that messaged the executor
     permission:  helloWorld.reply
-    default: true
   spawntext:
     description: Spawns an invisible armor stand with a name
     permission: helloWorld.spawntext
@@ -30,4 +29,15 @@ commands:
   voteskip:
     description: Allows players to vote to skip the night as long as half are sleeping!
     permission: helloWorld.voteskip
+  setdisplayname:
+    description: Allows the user to change their display name using Adventure's MiniMessage format.
+    permission: helloWorld.setdisplayname
+permissions:
+  helloWorld.setDisplayName:
+    default: true
+  helloWorld.voteskip:
+    default: true
+  helloWorld.reply:
+    default: true
+  helloWorld.pm:
     default: true

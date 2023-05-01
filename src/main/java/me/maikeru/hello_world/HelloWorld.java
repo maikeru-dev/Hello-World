@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.UUID;
 
 public final class HelloWorld extends JavaPlugin {
+    private static HelloWorld plugin;
     private static int sleepingCount = 0;
     private static ArrayList<UUID> skipNightVotes = new ArrayList<>();
     private static HashMap<UUID, UUID> replyMap = new HashMap<>();
@@ -14,7 +15,7 @@ public final class HelloWorld extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        // Redundant: // Bukkit.getLogger().info("Hello world!");
+        plugin = this;
         this.getCommand("hello").setExecutor(new CommandHelloHandler());
         this.getCommand("pm").setExecutor(new CommandPM());
         this.getCommand("reply").setExecutor(new CommandReply());
@@ -22,7 +23,9 @@ public final class HelloWorld extends JavaPlugin {
         this.getCommand("creative").setExecutor(new CommandCreative());
         this.getCommand("killtext").setExecutor(new CommandKillText());
         this.getCommand("voteskip").setExecutor(new CommandVoteSkip());
+        this.getCommand("setdisplayname").setExecutor(new CommandSetDisplayName());
         getServer().getPluginManager().registerEvents(new ListenerSleep(), this);
+        getServer().getPluginManager().registerEvents(new ListenerJoin(), this);
     }
 
     @Override
@@ -34,6 +37,11 @@ public final class HelloWorld extends JavaPlugin {
         // Should this happen, it means something went really wrong
         Bukkit.getServer().getPluginManager().disablePlugin(this);
     }
+
+    public static HelloWorld getPlugin() {
+        return plugin;
+    }
+
     public static class VoteSystem {
         public static void addVoteTotal(UUID playerId) {
             skipNightVotes.add(playerId);
@@ -72,5 +80,6 @@ public final class HelloWorld extends JavaPlugin {
     public static void updateReplyMap(UUID from, UUID to) {
         replyMap.put(to, from);
     }
+
 
 }
