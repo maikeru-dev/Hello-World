@@ -17,5 +17,6 @@ I sometimes use Exceptions to do control-flow, however performance-hits are miti
 - [x] Hello World! command, just says Hello World to you.
 - [x] Voteskip command for skipping the night, plus a couple messages
 - [x] setDisplayName command, essentially sets a nickname for the executor with whatever they like
+- [x] Permissions are set up correctly!
 - [ ] Creative Command, it is meant to be a counterpart to the survival command and it is meant to strip you of your user data and gives you the creative gamemode.
 - [ ] Survival command, the vice-versa, gives your backup user data and gives you the survival gamemode. (This is useful for development on a SMP or something.)
