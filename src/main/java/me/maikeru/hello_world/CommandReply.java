@@ -19,7 +19,7 @@ public class CommandReply implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
         if (!(commandSender instanceof Player)) return false;
         if (strings.length < 1) {
-            commandSender.sendMessage(ChatColor.RED + "What is your msg? Usage: /reply (message...)" );
+            commandSender.sendMessage(ChatColor.RED + "What is your msg?" );
             return false;
         }
 

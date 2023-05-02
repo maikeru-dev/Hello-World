@@ -20,6 +20,7 @@ commands:
   killtext:
     description: Kills the invisible armor stand with a name
     permission: helloWorld.killtext
+    usage: "/killtext <tag_name>"
   creative:
     description: Switches the executor's user data to a temporary empty file and sets their gamemode to creative.
     permission: helloWorld.creative

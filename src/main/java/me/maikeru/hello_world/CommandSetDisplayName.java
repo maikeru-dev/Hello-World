@@ -24,7 +24,7 @@ public class CommandSetDisplayName implements CommandExecutor {
         if (!(sender instanceof Player)) return false;
 
         try {
-            if (args.length < 1) throw new invalidArgsException();
+            if (args.length < 1) throw new CustomException.invalidArgsException(1);
 
             Player p = (Player) sender;
             String dpName = compileString(args);
