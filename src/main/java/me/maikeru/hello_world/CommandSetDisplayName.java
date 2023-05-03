@@ -23,16 +23,16 @@ public class CommandSetDisplayName implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (!(sender instanceof Player)) return false;
 
+        Player p = (Player) sender;
+
         try {
             if (args.length < 1) throw new CustomException.invalidArgsException(1);
 
-            Player p = (Player) sender;
             String dpName = compileString(args);
 
             PersistentDataContainer playerData = p.getPersistentDataContainer();
             NamespacedKey key = new NamespacedKey(HelloWorld.getPlugin(), "nickname");
             playerData.set(key, PersistentDataType.STRING, dpName);
-
 
             MiniMessage miniMessage = MiniMessage.miniMessage();
             Component parsed = miniMessage.deserialize(dpName);

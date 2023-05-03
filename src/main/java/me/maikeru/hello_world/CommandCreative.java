@@ -36,7 +36,6 @@ public class CommandCreative implements CommandExecutor {
             return false;
         }
 
-
         return true;
     }
     // Remember user's data and then change their inventory

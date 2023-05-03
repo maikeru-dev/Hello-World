@@ -2,6 +2,7 @@ package me.maikeru.hello_world;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
+import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -34,14 +35,14 @@ public class CommandVoteSkip implements CommandExecutor {
             }else {
                 TextComponent text = Component.text()
                         .content( votesCount + "/" + onlinePlayersCount + " have voted to skip the night! " + (onlinePlayersCount-votesCount) + " more are required to vote!")
-                        .color(TextColor.color(190, 190, 190))
+                        .color(NamedTextColor.GRAY)
                         .build();
                 p.sendMessage(text);
             }
 
 
         }catch (CustomException e) {
-            sender.sendMessage(e.getMessage());
+            p.sendMessage(e.getMessage());
         }
         return true;
     }

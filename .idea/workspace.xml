@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff38011f-89e9-4b75-9e7a-f42fae3184bf" name="Changes" comment="Updated the CustomException to provide a method which passes the component with the error msg, keep it DRY!">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandSpectate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/ListenerSpectate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/SpectatePositionDataType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/SpectatePositionInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_papermc_paper_paper_api_1_19_4_R0_1_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_papermc_paper_paper_api_1_19_4_R0_1_SNAPSHOT.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandKillText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandKillText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandCreative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandCreative.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandPM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandPM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandReply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandReply.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandSetDisplayName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandSetDisplayName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandSpawnText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandSpawnText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandSpectate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandSpectate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandVoteSkip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CommandVoteSkip.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CustomException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/CustomException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/ListenerSleep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/maikeru/hello_world/ListenerSleep.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682981971993</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Updated the CustomException to provide a method which passes the component with the error msg, keep it DRY!">
+      <created>1683035640748</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683035640748</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

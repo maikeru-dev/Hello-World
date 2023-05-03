@@ -23,7 +23,6 @@ public class CommandPM implements CommandExecutor {
                 Use TextComponents for DisplayNames
                 Have better readability
                 Better Input validation
-
         * */
 
         if (!(sender instanceof Player)) return false;
@@ -58,7 +57,6 @@ public class CommandPM implements CommandExecutor {
         }
         catch(Exception e) {Bukkit.getLogger().log(Level.SEVERE, "Error! Could not finish PM command: " + e.getMessage());}
         return false;
-
 
     }
     public String validateCommandContent(String[] args){
