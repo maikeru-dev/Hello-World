@@ -19,7 +19,7 @@ public class ListenerSleep implements Listener {
     public void PlayerBedEnterEvent(PlayerBedEnterEvent e) {
 
         if (e.getBedEnterResult() == PlayerBedEnterEvent.BedEnterResult.OK) {
-            if (e.getPlayer().getWorld().getGameRuleValue(GameRule.DO_DAYLIGHT_CYCLE)) {
+            if (e.getPlayer().getWorld().getGameRuleValue(GameRule.DO_DAYLIGHT_CYCLE) == Boolean.TRUE) {
             TextComponent text = Component.text()
                     .content(HelloWorld.updateCurrentPlayerSleepingCount(1) + "/" + Bukkit.getOnlinePlayers().size() + " are currently sleeping! Get into bed!")
                     .color(TextColor.color(190, 190, 190))
@@ -32,7 +32,7 @@ public class ListenerSleep implements Listener {
     @EventHandler
     public void PlayerBedLeaveEvent(PlayerBedLeaveEvent e) {
         if (HelloWorld.getCurrentPlayerSleepingCount() != 0) { // getting daytime is too slow
-            if (e.getPlayer().getWorld().getGameRuleValue(GameRule.DO_DAYLIGHT_CYCLE)) {
+            if (e.getPlayer().getWorld().getGameRuleValue(GameRule.DO_DAYLIGHT_CYCLE) == Boolean.TRUE) {
                 TextComponent text = Component.text()
                         .content(HelloWorld.updateCurrentPlayerSleepingCount(-1) + "/" + Bukkit.getOnlinePlayers().size() + " are currently sleeping! :(")
                         .color(TextColor.color(190, 190, 190))
@@ -46,7 +46,7 @@ public class ListenerSleep implements Listener {
     public void TimeSkipEvent(TimeSkipEvent e) {
         HelloWorld.resetCurrentPlayerSleepingCount();
         Bukkit.getLogger().info("TimeSkip works!");
-        if (e.getWorld().getGameRuleValue(GameRule.DO_DAYLIGHT_CYCLE)) {
+        if (e.getWorld().getGameRuleValue(GameRule.DO_DAYLIGHT_CYCLE) == Boolean.TRUE) {
             TextComponent text = Component.text()
                     .content("It's daytime! Yay :)")
                     .color(TextColor.color(144, 238, 144))
